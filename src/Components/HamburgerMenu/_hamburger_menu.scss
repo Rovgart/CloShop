@@ -1,0 +1,16 @@
+@use "../../Abstracts/" as *;
+.hamburger__menu {
+  position: sticky;
+  top: 0;
+  width: 35vw;
+  height: 100vh;
+  background-color: $header_logo;
+}
+.hamburger__menu_content {
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: $hamburger_menu_item;
+  font-family: $font1;
+}

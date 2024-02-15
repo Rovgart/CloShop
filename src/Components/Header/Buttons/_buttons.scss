@@ -1,0 +1,8 @@
+@use "../../../Abstracts/" as *;
+button {
+  padding: 0.225rem 0.5rem 0 0.5rem;
+}
+.buttons {
+  display: flex;
+  gap: min(0.3rem);
+}
