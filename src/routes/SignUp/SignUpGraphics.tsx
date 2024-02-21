@@ -1,6 +1,5 @@
 import React from "react";
 import hoodie from "../../assets/SignUpSVG/clothes-svgrepo-com.svg";
-import jewelry from "../../assets/SignUpSVG/jewelry-svgrepo-com.svg";
 import shirt from "../../assets/SignUpSVG/shirt-svgrepo-com.svg";
 import pants from "../../assets/SignUpSVG/trousers-svgrepo-com.svg";
 import ring from "../../assets/SignUpSVG/ring-svgrepo-com.svg";

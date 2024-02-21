@@ -6,8 +6,8 @@ import React from "react";
 interface AppState {
   isHamburgerMenuOpen: boolean;
 }
-class App extends React.Component<{}, AppState> {
-  constructor(props: {}) {
+class App extends React.Component<object, AppState> {
+  constructor(props: object) {
     super(props);
     this.state = {
       isHamburgerMenuOpen: false,

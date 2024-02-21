@@ -6,6 +6,7 @@ main {
   display: flex;
   place-content: center;
   font-family: a.$font1;
+  overflow: hidden;
 }
 nav {
   h1 {
@@ -43,6 +44,8 @@ nav {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     padding: 1.3em 2em 1.3em 2em;
+    border: 0;
+    gap: 1.25rem;
     div {
       display: flex;
       flex-direction: column;
@@ -56,6 +59,7 @@ nav {
       padding: 0.7em 0 0.7em;
       background-color: a.$header_font_color;
       color: a.$header_buttons_color;
+      border: 0;
     }
   }
 }
@@ -76,6 +80,7 @@ nav {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  align-self: center;
   margin: 0 auto;
   // place-items: center;
   @include a.borderTest(black);
@@ -141,5 +146,6 @@ img {
   }
   .right__side_section {
     width: 100%;
+    display: none;
   }
 }
