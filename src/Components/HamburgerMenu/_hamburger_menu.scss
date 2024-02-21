@@ -4,7 +4,7 @@
   top: 0;
   width: 35vw;
   height: 100vh;
-  background-color: $header_logo;
+  background-color: $hamurger__menu_background;
 }
 .hamburger__menu_content {
   flex-direction: column;
@@ -13,4 +13,7 @@
   gap: 0.3rem;
   font-size: $hamburger_menu_item;
   font-family: $font1;
+  text-transform: capitalize;
+  text-align: center;
+  color: $hamburger__menu_colors;
 }

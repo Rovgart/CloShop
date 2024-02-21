@@ -9,8 +9,8 @@ class Header extends React.Component<HeaderProps> {
   render() {
     const { onToggleHamburgerHandler } = this.props;
     return (
-      <header onClick={onToggleHamburgerHandler} className="header">
-        <GiHamburgerMenu />
+      <header className="header">
+        <GiHamburgerMenu onClick={onToggleHamburgerHandler} />
         <Buttons />
       </header>
     );

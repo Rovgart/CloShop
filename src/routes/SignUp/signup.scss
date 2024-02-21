@@ -1,0 +1,145 @@
+@use "../../Abstracts/" as a;
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  place-content: center;
+  font-family: a.$font1;
+}
+nav {
+  h1 {
+    font-size: a.$clamp_labels;
+    color: a.$cos_4;
+    margin: 0 0 0.9em 0;
+  }
+  div {
+    h1 {
+      font-size: a.$signUp_logo_clamp;
+    }
+    span {
+      font-weight: 250;
+    }
+  }
+}
+#SignUpForm {
+  margin-top: 1.3rem;
+  width: 70%;
+  gap: min(0.4rem);
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 0.9em 0.9em 0.9em 0;
+    border: 0.3px solid a.$cos_5;
+  }
+  input:focus {
+    background-color: rgb(246, 244, 244);
+  }
+  div:nth-child(2) {
+    grid-column: 2;
+  }
+  fieldset {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding: 1.3em 2em 1.3em 2em;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      label {
+        font-size: a.$clamp_labels;
+      }
+    }
+    input[type="submit"] {
+      grid-column: 1/3;
+      padding: 0.7em 0 0.7em;
+      background-color: a.$header_font_color;
+      color: a.$header_buttons_color;
+    }
+  }
+}
+
+.left__side_section {
+  width: 50%;
+  height: 100vh;
+  margin: 2.3rem 0 0 1.2rem;
+}
+.right__side_section {
+  width: 50%;
+  height: 100vh;
+  background-color: a.$cos_1;
+}
+.SignUp__graphics_container {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  margin: 0 auto;
+  // place-items: center;
+  @include a.borderTest(black);
+  aside {
+    @include a.borderTest(yellow);
+    font-family: a.$font1;
+    text-align: center;
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    h1 {
+      color: a.$cos_4;
+      font-size: a.$signUp_logo_clamp;
+    }
+  }
+}
+.SignUp__graphics_content--1 {
+  grid-column: 1;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  @include a.borderTest(green);
+}
+.SignUp__graphics_content--2 {
+  grid-column: 2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: center;
+  @include a.borderTest(red);
+}
+img {
+  max-width: 100%;
+}
+.SignUp__graphics_content--1 img,
+.SignUp__graphics_content--2 img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%; // Set a specific width for all images, adjust as needed
+  height: 100%; // Set a specific height for all images, adjust as needed
+}
+@media (width<a.$screen-md-min) {
+  main {
+    flex-direction: column;
+    nav {
+      text-align: center;
+      padding: 1.2rem;
+    }
+    #SignUpForm {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .left__side_section {
+    order: 1;
+    @include a.borderTest(green);
+    width: 100%;
+    margin: 0 0 0 0;
+  }
+  .right__side_section {
+    width: 100%;
+  }
+}

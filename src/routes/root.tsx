@@ -1,12 +1,12 @@
 // App component
 
-import Header from "./Components/Header/Header";
-import HamburgerMenu from "./Components/HamburgerMenu/HamburgerMenu";
+import Header from "../Components/Header/Header";
+import HamburgerMenu from "../Components/HamburgerMenu/HamburgerMenu";
 import React from "react";
 interface AppState {
   isHamburgerMenuOpen: boolean;
 }
-class App extends React.Component<{}, AppState> {
+class Root extends React.Component<{}, AppState> {
   constructor(props: {}) {
     super(props);
     this.state = {
@@ -37,4 +37,4 @@ class App extends React.Component<{}, AppState> {
   }
 }
 
-export default App;
+export default Root;

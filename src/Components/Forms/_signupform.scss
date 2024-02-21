@@ -1,0 +1,59 @@
+@use "../../Abstracts/" as *;
+#SignInForm {
+  @include borderTest(red);
+  font-family: $font1;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+  align-items: center; /* Center the form horizontally */
+  justify-content: center; /* Center the form vertically */
+  padding: 0.5em 0 1.25em 0;
+  width: 100%;
+  height: 100%;
+  gap: 1.2rem;
+  div {
+    display: flex;
+    flex-direction: column;
+    // align-items: center; /* Center the content of each div horizontally */
+
+    gap: 0.5rem;
+    input[type="email"] {
+      background: url("../../assets/email-svgrepo-com.svg") no-repeat left
+        center; /* Replace with the correct path to your SVG icon */
+      background-size: 1rem; /* Adjust the size as needed */
+    }
+    input[type="password"] {
+      background: url("../../assets/password-lock-svgrepo-com.svg") no-repeat
+        left center; /* Replace with the correct path to your SVG icon */
+      background-size: 1rem; /* Adjust the size as needed */
+    }
+
+    input[type="password"],
+    input[type="email"] {
+      padding: 0.8em 1.2rem 0.8em 2.5rem; /* Increased left padding for icon */
+      max-width: 100%;
+      border: 0.5px solid black;
+
+      &::before {
+        position: absolute;
+        left: 0.75rem; /* Adjust the left position as needed */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.5rem; /* Adjust the width as needed */
+        height: 1.5rem; /* Adjust the height as needed */
+      }
+    }
+    label {
+      font-size: $hamburger_menu_item;
+      text-align: start;
+      color: $modal_color;
+    }
+  }
+  input[type="submit"] {
+    padding: 0.67rem 1.5rem 0.67rem 1.5rem;
+    background-color: $modal_color;
+    color: $header_font_color;
+    border-radius: 13px;
+  }
+}
