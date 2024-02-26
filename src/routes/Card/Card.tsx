@@ -1,28 +1,64 @@
 import React from "react";
 import CardItem from "./CardItem";
-type categoryState = {
-  data: object;
+import "./_card.scss";
+type CategoryState = {
+  data: Product[];
 };
-class Card extends React.Component {
-  state: categoryState = {
+
+type Product = {
+  id: number;
+  title: string;
+  image: string;
+  description: string;
+  price: string;
+};
+
+type CardProps = {
+  categoryName: string;
+};
+
+class Card extends React.Component<CardProps, CategoryState> {
+  state: CategoryState = {
     data: [],
   };
   fetchingProducts = async () => {
     try {
       const response = await fetch(
-        "https://fakestoreapi.com/products/category/jewelery"
+        `https://fakestoreapi.com/products/category/${this.props.categoryName}`
       );
+
       if (!response.ok) {
-        console.log(`Something gone wrong ${response.status}`);
+        throw new Error(`Something gone wrong ${response.status}`);
       }
-      const data = response.json();
+
+      const data = await response.json();
       console.log(data);
+
+      this.setState({ data });
     } catch (error) {
-      throw new Error();
+      console.error(error);
     }
   };
+
+  componentDidMount(): void {
+    this.fetchingProducts();
+  }
+
   render(): React.ReactNode {
-    return <>{this.state.data.map((data) => {})}</>;
+    return (
+      <article>
+        {this.state.data.map((data) => (
+          <CardItem
+            key={data.id}
+            photo={data.image}
+            productTitle={data.title}
+            productDesc={data.description}
+            productPrice={`${data.price} $`}
+          />
+        ))}
+      </article>
+    );
   }
 }
+
 export default Card;

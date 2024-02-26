@@ -1,13 +1,13 @@
 // App component
-
+import Card from "./Card/Card";
 import Header from "../Components/Header/Header";
 import HamburgerMenu from "../Components/HamburgerMenu/HamburgerMenu";
 import React from "react";
 interface AppState {
   isHamburgerMenuOpen: boolean;
 }
-class Root extends React.Component<{}, AppState> {
-  constructor(props: {}) {
+class Root extends React.Component<object, AppState> {
+  constructor(props: object) {
     super(props);
     this.state = {
       isHamburgerMenuOpen: false,
@@ -30,8 +30,7 @@ class Root extends React.Component<{}, AppState> {
 
         {/* HamburgerMenu component, conditionally rendered based on the state */}
         {isHamburgerMenuOpen && <HamburgerMenu />}
-
-        {/* Other content */}
+        <Card categoryName="jewelery"></Card>
       </div>
     );
   }

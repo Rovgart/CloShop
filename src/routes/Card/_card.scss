@@ -1,0 +1,34 @@
+@use "../../Abstracts/" as *;
+article {
+  width: 100%;
+  @include borderTest(yellow);
+  margin: 0 auto;
+  font-family: $font1;
+}
+section {
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px black;
+  flex-direction: column;
+  place-items: center;
+  gap: 3rem;
+  //   @include borderTest(green);
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  div {
+    width: 100%;
+    @include borderTest(brown);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  picture {
+    width: 30%;
+    height: 50%;
+    img {
+      //   max-width: 100%;
+    }
+  }
+}

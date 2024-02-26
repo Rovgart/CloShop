@@ -1,0 +1,12 @@
+@use "../../../Abstracts/" as *;
+button {
+  border: 3px solid $cos_1;
+  color: $cos_2;
+  background-color: $cos_2;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  justify-content: center;
+}
