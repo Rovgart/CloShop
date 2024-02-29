@@ -1,0 +1,15 @@
+@use "../../Abstracts/" as *;
+.landing__container {
+  display: grid;
+  grid-template-columns: minmax(0, 5rem) minmax(0, 1fr) minmax(0, 1fr) minmax(
+      0,
+      5rem
+    );
+  // @include borderTest(lime);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  .leftside__container {
+    .leftside__content {
+      grid-column: 2/3;
+    }
+  }
+}

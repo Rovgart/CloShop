@@ -1,11 +1,12 @@
 import React from "react";
 import Card from "../Card/Card";
+import Layout from "../Layout/Layout";
 class Mens_Clothing extends React.Component {
   render(): React.ReactNode {
     return (
-      <>
-        <Card categoryName="Men's Clothing" />
-      </>
+      <Layout>
+        <Card categoryName={"men's clothing"} />
+      </Layout>
     );
   }
 }

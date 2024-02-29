@@ -5,6 +5,11 @@
   width: 35vw;
   height: 100vh;
   background-color: $hamurger__menu_background;
+  font-family: $font1;
+  .hamburger__menu--logo {
+    color: $hamburger__menu_logo;
+    text-align: center;
+  }
 }
 .hamburger__menu_content {
   flex-direction: column;

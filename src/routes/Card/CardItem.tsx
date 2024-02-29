@@ -15,18 +15,19 @@ class CardItem extends React.Component<CardProps> {
     const productFinalForm = productTitleReformatted.join(" ");
 
     return (
-      <section>
-        <picture>
-          <img src={this.props.photo} alt="" />
-        </picture>
-        <div>
+      <section className="cardItem__container">
+        <div className="product__desc">
           <h1>{productFinalForm}</h1>
           <p>{this.props.productDesc}</p>
         </div>
-        <div>
-          <span>{this.props.productPrice}</span>
+        <picture>
+          <img src={this.props.photo} alt="" />
+        </picture>
+        <div className="product__price">
+          <span className="card__price">{this.props.productPrice}</span>
         </div>
-        <div>
+        <hr />
+        <div className="buttons">
           <Buttons />
         </div>
       </section>

@@ -1,8 +1,13 @@
 @use "../../../Abstracts/" as *;
 button {
-  border: 3px solid $cos_1;
-  color: $cos_2;
-  background-color: $cos_2;
+  padding: 0.625rem 0.9rem 0.625rem 0.9rem;
+  font-size: $button_clamp;
+  font-weight: 550;
+  background-color: $button_background;
+  color: $button_color;
+  border: 0.2px solid $button_background;
+  border-radius: 4.5px;
+  text-transform: uppercase;
 }
 .buttons {
   display: flex;

@@ -4,8 +4,19 @@ TODO: Dodanie route do SignUp
 TODO: Stworzenie SignUp Landing Page(mam wzorzec w assetach)
 TODO: Obsługa walidacji
 TODO: Zastosować preventDefault dla submit inputa
-TODO: Dodać logo do hamburger menu
 
 Na fascie:
 TODO: Sprawdzic czy ten user sie serio tworzy
 TODO: Wyswietlic wszystkich userow (id:11 ma byc moj ) 
+
+28.02.2024r
+
+TODO: Dodać logo do hamburger menu
+TODO: Stworzyć ogólny <LAYOUT/> z headerem
+FIXME: Zjebal się mobile view dla kategorii
+
+Pozniej:
+TODO: Zrobić jakiś layout dla main Page
+TODO: Stworzyc jakis modal, gdzie pokazuje ze user sie pomyslnie zarejestrowal
+TODO: Wyjscie z modala za pomocą ESC/Touch
+TODO: Wykorzystać useLoaderData dla kategorii

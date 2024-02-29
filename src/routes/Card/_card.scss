@@ -1,34 +1,121 @@
 @use "../../Abstracts/" as *;
 article {
-  width: 100%;
-  @include borderTest(yellow);
-  margin: 0 auto;
   font-family: $font1;
 }
+.card__price {
+  font-size: $card_price_clamp;
+}
 section {
-  display: flex;
-  border-radius: 15px;
-  box-shadow: 0 2px 4px black;
-  flex-direction: column;
-  place-items: center;
-  gap: 3rem;
-  //   @include borderTest(green);
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  div {
+  h1 {
+    color: $card_title;
+    font-weight: 550;
+    text-transform: uppercase;
+  }
+}
+@media (width<$screen-md-min) and (width>$screen-sm-min) and (orientation: portrait) {
+  .card__container {
     width: 100%;
-    @include borderTest(brown);
-    text-align: center;
+    @include borderTest(yellow);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 2.5rem;
   }
-  picture {
-    width: 30%;
-    height: 50%;
-    img {
-      //   max-width: 100%;
+  .cardItem__container {
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px black;
+    flex-direction: column;
+    place-items: center;
+    gap: 3rem;
+    background-color: $card_background;
+
+    // padding: 1.3rem;
+    @include borderTest(green);
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+    .product__desc {
+      p {
+        display: none;
+      }
+    }
+    div {
+      width: 100%;
+      // @include borderTest(brown);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      h1 {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+    picture {
+      width: 90%;
+      height: 40%;
+      img {
+        width: 100%;
+        height: 100%;
+        // @include borderTest(red);
+        object-fit: contain;
+      }
+    }
+
+    hr {
+      height: 1px; /* Adjust the height/thickness as needed */
+      box-shadow: 0 40px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow values as needed */
+      background-color: $card_line; /* Optional: Set a background color */
+      border: none; /* Optional: Remove the default border */
+      width: 75%;
+    }
+  }
+}
+@media (width>$screen-md-min) and (orientation: landscape) {
+  .card__container {
+    width: 70%;
+    margin: 0 auto;
+    @include borderTest(orange);
+  }
+  .cardItem__container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    place-items: center;
+    height: 50vh;
+    padding: 3rem;
+    @include borderTest(violet);
+    .product__desc {
+      grid-column: 1;
+      grid-row: 1/3;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .product__price {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .buttons {
+      grid-column: 2;
+      grid-row: 3;
+    }
+    hr {
+      display: none;
+    }
+    picture {
+      grid-column: 2;
+      width: 100%;
+      height: 100%;
+      // @include borderTest(orange);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 }
