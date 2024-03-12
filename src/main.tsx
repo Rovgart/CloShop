@@ -31,17 +31,17 @@ const router = createBrowserRouter([
   {
     path: "/Categories/electronics",
     element: <Electronics />,
-    loader: loader("electronics"),
+    loader: (params) => loader("electronics", params),
   },
   {
     path: "/Categories/men's clothing",
     element: <Mens_Clothing />,
-    loader: loader("men's clothing"),
+    loader: (params) => loader("men's clothing", params),
   },
   {
     path: "/Categories/women's clothing",
     element: <WomenClothing />,
-    loader: loader("women's clothing"),
+    loader: (params) => loader("women's clothing", params),
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
