@@ -7,15 +7,14 @@ type Product = {
 };
 
 // Assuming your loader function returns a Promise<Product[]>
-const loader = async (params) => {
-  const category = { params };
+const jewelryFetcher = async () => {
   // Fetch your data here
   const resp = await fetch(
-    `https://fakestoreapi.com/products/category/${category}`
+    `https://fakestoreapi.com/products/category/jewelry`
   );
   const data = resp.json;
 
   return data; // Assuming 'data' is an array of Product
 };
 
-export default loader;
+export default jewelryFetcher;

@@ -5,7 +5,7 @@ class Jewelery extends React.Component {
   render(): React.ReactNode {
     return (
       <Layout>
-        <Card categoryName={"jewelery"}></Card>
+        <Card categoryName="{jewelery}"></Card>
       </Layout>
     );
   }
