@@ -2,11 +2,14 @@
 .header_button {
   padding: 0.325rem 0.9rem 0.325rem 0.9rem;
   font-size: $clamp_header_buttons;
+  font-family: $font4;
+
   font-weight: 500;
   background-color: $button_background;
   color: $button_color;
   border: 0.2px solid $header_font_color;
   border-radius: 4.5px;
+  text-transform: uppercase;
 }
 .buttons {
   display: flex;

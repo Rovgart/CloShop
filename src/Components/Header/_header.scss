@@ -1,7 +1,7 @@
 @use "../../Abstracts/" as *;
 header {
   width: 100%;
-  height: min(15vh);
+  height: min(10vh);
   background-color: $header_color;
   display: flex;
   justify-content: space-around;

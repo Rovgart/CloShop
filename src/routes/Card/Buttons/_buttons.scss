@@ -1,5 +1,5 @@
 @use "../../../Abstracts/" as *;
-button {
+.card_button {
   padding: 0.625rem 0.9rem 0.625rem 0.9rem;
   font-size: $button_clamp;
   font-weight: 550;

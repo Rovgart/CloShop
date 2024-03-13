@@ -17,7 +17,7 @@ class CardItem extends React.Component<CardProps> {
     return (
       <section className="cardItem__container">
         <div className="product__desc">
-          <h1>{productFinalForm}</h1>
+          <h1 className="card__product_description">{productFinalForm}</h1>
           <p>{this.props.productDesc}</p>
         </div>
         <picture>

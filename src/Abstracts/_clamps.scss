@@ -1,6 +1,11 @@
 $hamburger_menu_item: clamp(1rem, 1.5vw, 2.5rem);
-$clamp_header_buttons: clamp(0.85rem, 1.3vw, 1.3rem);
+$clamp_header_buttons: clamp(0.85rem, 1vw, 1.3rem);
 $clamp_labels: clamp(0.7rem, 2.3vw, 1.3rem);
 $signUp_logo_clamp: clamp(1.3rem, 2.5vw, 3rem);
 $button_clamp: clamp(1.5rem, 1.2vw, 3rem);
 $card_price_clamp: clamp(1.3rem, 1.65vw, 3rem);
+
+// Landing
+$clamp_landing_heading_h3: clamp(1rem, 1.5vw, 2.5rem);
+$clamp_landing_heading_h2: clamp(1rem, 3vw, 5rem);
+$clamp_landing_heading_h1: clamp(1rem, 3vw, 5rem);

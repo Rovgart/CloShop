@@ -6,7 +6,7 @@ article {
   font-size: $card_price_clamp;
 }
 section {
-  h1 {
+  .card__product_description {
     color: $card_title;
     font-weight: 550;
     text-transform: uppercase;

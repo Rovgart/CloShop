@@ -20,8 +20,8 @@ const LandingPage: React.FC = () => {
     <article className="landing__container">
       <section className="leftside__container">
         <div className="leftside__content">
-          <h2>Outfit of the day</h2>
           <div className="leftside__content_text">
+            <h3>Outfit of the day</h3>
             <h2>All your </h2>
             <h1>styles are here</h1>
           </div>
@@ -31,13 +31,8 @@ const LandingPage: React.FC = () => {
             iusto veritatis. Quae, inventore corporis ratione magnam alias
             voluptate.
           </p>
-          <div className="lefside__content_button">
+          <div className="leftside__content_button">
             <button>Buy now</button>
-          </div>
-          <div className="socialmedias__container">
-            <CiInstagram />
-            <CiFacebook />
-            <BsSend />
           </div>
         </div>
       </section>
@@ -49,6 +44,11 @@ const LandingPage: React.FC = () => {
           <div>{/* Lines and dots here */}</div>
           <div>{/* Clothes images here */}</div>
         </aside>
+      </section>
+      <section className="socialmedias__container">
+        <CiInstagram size={"3rem"} />
+        <CiFacebook size={"3rem"} />
+        <BsSend size={"3rem"} />
       </section>
     </article>
   );
