@@ -24,7 +24,7 @@ class CardItem extends React.Component<CardProps> {
           <img src={this.props.photo} alt="" />
         </picture>
         <div className="product__price">
-          <span className="card__price">{this.props.productPrice}</span>
+          <span className="card__price"> $ {this.props.productPrice}</span>
         </div>
         <hr />
         <div className="buttons">

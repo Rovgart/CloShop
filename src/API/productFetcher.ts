@@ -1,6 +1,6 @@
 const productFetcher = async () => {
   try {
-    const resp = await fetch("https://fakestoreapi.com/products/categories");
+    const resp = await fetch("https://fakestoreapi.com/products/1");
 
     if (!resp.ok) {
       throw new Error(`HTTP error! Status: ${resp.status}`);

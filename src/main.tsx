@@ -11,7 +11,6 @@ import Mens_Clothing from "./routes/Categories/Men's Clothing.tsx";
 import WomenClothing from "./routes/Categories/Women's Clothing.tsx";
 import loader from "./routes/Card/loader.ts";
 import productFetcher from "./API/productFetcher.ts";
-import { categoriesFetcher } from "./API/categoriesFetcher.ts";
 import jewelryFetcher from "./API/jewelryFetcher.ts";
 
 const router = createBrowserRouter([
@@ -19,7 +18,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
-    loader: categoriesFetcher,
+    loader: productFetcher,
   },
   {
     path: "/SignUp/SignUp",
@@ -28,7 +27,7 @@ const router = createBrowserRouter([
   {
     path: "/Categories/jewelery",
     element: <Jewelery />,
-    loader: jewelryFetcher,
+    loader: async () => await loader("jewelery"),
   },
   {
     path: "/Categories/electronics",
