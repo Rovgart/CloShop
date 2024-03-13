@@ -2,13 +2,13 @@
 CloShop is a React-based web application designed to provide users with an intuitive interface for purchasing jewelry, electronics, and clothing. The project utilizes React, React Router, and integrates with the Fake Store API to fetch product data. With CloShop, users can easily navigate through different product categories, add items to their cart, and proceed to checkout seamlessly.
 
 # Features
-    *Product Categories: CloShop offers a variety of product categories including jewelry, electronics, and clothing. Users can browse through these categories to find desired items.
-    *Product Listings: Each product category page displays a list of products with essential details such as name, price, and image.
-    *Product Details: Users can view detailed information about each product by clicking on its listing. This includes additional images, description, and specifications.
-    *Add to Cart: Users can add products to their cart directly from the product listing or product details page.
-    *Shopping Cart: CloShop maintains a shopping cart where users can review the items they've added, adjust quantities, and remove items if needed.
-    *Checkout Process: Once satisfied with their selection, users can proceed to checkout. The checkout process collects necessary information such as shipping address and payment details.
-    *Responsive Design: The UI is designed to be responsive, ensuring a seamless experience across various devices and screen sizes.
+    * Product Categories: CloShop offers a variety of product categories including jewelry, electronics, and clothing. Users can browse through these categories to find desired items.
+    * Product Listings: Each product category page displays a list of products with essential details such as name, price, and image.
+    * Product Details: Users can view detailed information about each product by clicking on its listing. This includes additional images, description, and specifications.
+    * Add to Cart: Users can add products to their cart directly from the product listing or product details page.
+    * Shopping Cart: CloShop maintains a shopping cart where users can review the items they've added, adjust quantities, and remove items if needed.
+    * Checkout Process: Once satisfied with their selection, users can proceed to checkout. The checkout process collects necessary information such as shipping address and payment details.
+    * Responsive Design: The UI is designed to be responsive, ensuring a seamless experience across various devices and screen sizes.
     
 # Technologies Used
     * React: CloShop is built using React, a popular JavaScript library for building user interfaces.
