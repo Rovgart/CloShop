@@ -12,6 +12,7 @@ import WomenClothing from "./routes/Categories/Women's Clothing.tsx";
 import loader from "./routes/Card/loader.ts";
 import productFetcher from "./API/productFetcher.ts";
 import { categoriesFetcher } from "./API/categoriesFetcher.ts";
+import jewelryFetcher from "./API/jewelryFetcher.ts";
 
 const router = createBrowserRouter([
   {
@@ -27,22 +28,22 @@ const router = createBrowserRouter([
   {
     path: "/Categories/jewelery",
     element: <Jewelery />,
-    loader: (params) => loader("jewelery", params),
+    loader: jewelryFetcher,
   },
   {
     path: "/Categories/electronics",
     element: <Electronics />,
-    loader: (params) => loader("electronics", params),
+    loader: () => loader("electronics"),
   },
   {
     path: "/Categories/men's clothing",
     element: <Mens_Clothing />,
-    loader: (params) => loader("men's clothing", params),
+    loader: () => loader("men's clothing"),
   },
   {
     path: "/Categories/women's clothing",
     element: <WomenClothing />,
-    loader: (params) => loader("women's clothing", params),
+    loader: () => loader("women's clothing"),
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
