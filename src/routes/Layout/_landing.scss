@@ -1,5 +1,6 @@
 @use "../../Abstracts/" as *;
 .landing__container {
+  @include borderTest(orange);
   display: grid;
   grid-template-columns: minmax(0, 5rem) minmax(0, 1fr) minmax(0, 1fr) minmax(
       0,
@@ -50,11 +51,37 @@
     }
   }
   .rightside__container {
+    @include borderTest(green);
     picture {
-      @include borderTest(green);
+      @include borderTest(red);
+      width: 50%;
+      height: auto;
       img {
+        @include borderTest(blue);
         max-width: 100%;
-        width: 50%;
+        max-height: 100%;
+        height: auto;
+        width: 40%;
+        display: block;
+        margin: 0 auto; /* Center the image within its container */
+        object-fit: cover; /* Maintain aspect ratio while covering the container */
+      }
+    }
+  }
+  .socialmedias__container > * {
+    color: $cos_3;
+  }
+}
+.newcollection__container {
+  .newcollection__card_item {
+    .newcollection__card_desc {
+      font-family: $font3;
+      h1 {
+        font-size: $clamp_landing_heading_h3;
+      }
+
+      span {
+        font-size: $card_price_clamp;
       }
     }
   }
@@ -64,7 +91,6 @@
   .landing__container {
     // place-items: center;
     @include borderTest(lime);
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
     .leftside__container {
       text-align: center;
       grid-column: span 2/-2;
@@ -90,7 +116,9 @@
 }
 @media (width >= $screen-md-min) {
   .landing__container {
-    place-items: center;
+    // place-items: center;
+    align-items: center;
+
     .leftside__container {
       grid-column: 2/2;
       .leftside__content {
@@ -101,16 +129,7 @@
     }
     .rightside__container {
       grid-column: 3/3;
-      picture {
-        img {
-          max-width: 100%;
-          height: auto;
-          width: 50%;
-          display: block;
-          margin: 0 auto; /* Center the image within its container */
-          object-fit: cover; /* Maintain aspect ratio while covering the container */
-        }
-      }
+      grid-row: 1;
     }
     .socialmedias__container {
       grid-column: 2/3;
@@ -118,6 +137,49 @@
       @include borderTest(green);
       display: flex;
       gap: min(3rem);
+    }
+  }
+  .newcollection__container {
+    // @include borderTest(lime);
+
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: minmax(0, 7rem) minmax(0, 1fr) minmax(0, 1fr) minmax(
+        0,
+        7rem
+      );
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+
+    .newcollection__card_item--1 {
+      // @include borderTest(red);
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+      grid-column: 2/3;
+      grid-row: 1/3;
+      align-items: center;
+
+      .newcollection__card_desc {
+        // display: grid;
+        // grid-template-columns: subgrid;
+        @include borderTest(pink);
+        grid-column: 2;
+        align-self: center;
+      }
+      picture {
+        @include borderTest(yellow);
+        width: 40%;
+        height: 100%;
+        place-self: center;
+        img {
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .newcollection__card_item--2 {
+      grid-column: 3/4;
+      grid-row: 1/3;
     }
   }
 }
