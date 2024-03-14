@@ -73,7 +73,15 @@
   }
 }
 .newcollection__container {
-  .newcollection__card_item {
+  .newcollection__card_item--1,
+  .newcollection__card_item--2 {
+    picture {
+      img {
+        max-width: 100%;
+        height: auto;
+        @include borderTest(red);
+      }
+    }
     .newcollection__card_desc {
       font-family: $font3;
       h1 {
@@ -158,28 +166,53 @@
       grid-column: 2/3;
       grid-row: 1/3;
       align-items: center;
+      @include borderTest(purple);
 
       .newcollection__card_desc {
-        // display: grid;
-        // grid-template-columns: subgrid;
-        @include borderTest(pink);
-        grid-column: 2;
-        align-self: center;
-      }
-      picture {
-        @include borderTest(yellow);
-        width: 40%;
-        height: 100%;
-        place-self: center;
-        img {
-          max-width: 100%;
-          object-fit: cover;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        @include borderTest(lime);
+        picture {
+          img {
+            @include borderTest(yellow);
+            width: 40%;
+            height: auto;
+            place-self: center;
+            img {
+              max-width: 100%;
+              object-fit: cover;
+            }
+          }
         }
       }
     }
     .newcollection__card_item--2 {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+      align-items: center;
+      .newcollection__card_desc {
+        // grid-column: 2/3;
+        // align-self: center;
+        @include borderTest(purple);
+      }
       grid-column: 3/4;
       grid-row: 1/3;
+      picture {
+        img {
+          @include borderTest(yellow);
+          width: 40%;
+          height: 100%;
+          place-self: center;
+          img {
+            max-width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 }

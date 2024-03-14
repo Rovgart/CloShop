@@ -14,7 +14,8 @@ const CollectionCards: React.FC<cardType> = ({
   desc: string;
 }) => {
   const [cardColl, setCardColl] = useState<cardType[]>([]);
-  const imageArr: string[] = [];
+  const [imageArray, setImageArray] = useState<[]>([]);
+
   useEffect(() => {
     const fetchCard = async () => {
       const response = await fetch("https://fakestoreapi.com/products?limit=4");
@@ -25,17 +26,17 @@ const CollectionCards: React.FC<cardType> = ({
     };
     fetchCard();
   }, []);
-  const imageFc = () => {
-    const imageArr: string[] = [];
-
+  const imageArr: string[] = [];
+  const imageFc = function () {
     cardColl.forEach((object) => {
       const { image } = object;
       imageArr.push(image);
     });
-    console.log(imageArr);
     return imageArr;
   };
   imageFc();
+  console.log(imageArr);
+  console.log(imageArr[0]);
   return (
     <>
       <div className="newcollection__card_item--1">
@@ -43,37 +44,39 @@ const CollectionCards: React.FC<cardType> = ({
           <h1>Stylish Round </h1>
           <h1>Colorfull Glass</h1>
           <span>Costam</span>
+          <picture>
+            <img src={`${imageArr[0]}`} alt="" />
+          </picture>
         </div>
-        <picture>
-          <img src={imageArr[0]} alt="" />
-        </picture>
         <div>
           <div>
             <h1>Couple on </h1>
             <h1>The Gio</h1>
             <span>Costam</span>
+            <picture>
+              <img src={`${imageArr[1]}`} alt="" />
+            </picture>
           </div>
-          <picture>
-            <img src={`${imageArr[1]}`} alt="" />
-          </picture>
         </div>
       </div>
       <div className="newcollection__card_item--2">
         <div className="newcollection__card_desc">
-          <h1>Elegant Jack </h1>
-          <h1>Sparrow Hat</h1>
+          <h1>Stylish Round </h1>
+          <h1>Colorfull Glass</h1>
           <span>Costam</span>
           <picture>
             <img src={`${imageArr[2]}`} alt="" />
           </picture>
         </div>
         <div>
-          <h1>Trendly </h1>
-          <h1>Women Hill</h1>
-          <span>Costam</span>
-          <picture>
-            <img src={`${imageArr[3]}`} alt="" />
-          </picture>
+          <div>
+            <h1>Couple on </h1>
+            <h1>The Gio</h1>
+            <span>Costam</span>
+            <picture>
+              <img src={`${imageArr[3]}`} alt="" />
+            </picture>
+          </div>
         </div>
       </div>
     </>
